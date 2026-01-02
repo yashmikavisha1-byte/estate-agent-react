@@ -149,20 +149,41 @@ function App() {
         <input name="postcode" placeholder="Postcode (BR1)" onChange={handleChange} />
         <input type="date" name="dateAfter" value={search.dateAfter} onChange={handleChange} />
       </div>
-
-      <div className="grid">
-        {filteredProperties.map(p => (
-          <div className="card" key={p.id} onClick={() => setSelectedProperty(p)}>
-            <img src={p.images[0]} alt="" />
+       {/* ===== RESULTS ===== */}
+      <h2>All Properties </h2>
+      <div
+        className="grid"
+        onDragOver={(e) => e.preventDefault()}
+        onDrop={handleDropToResults}
+      >
+        {filteredProperties.map((p) => (
+          <div
+            className="card"
+            key={p.id}
+            draggable
+            onDragStart={() => handleDragStart(p)}
+          >
+            <img src={p.images[0]} alt="Property" onClick={() => setSelectedProperty(p)} />
             <h3>{p.description}</h3>
             <p>{p.location}</p>
-            <p>£{p.price}</p>
+            <p>£{p.price.toLocaleString()}</p>
+
+            <button
+              className={isFavourite(p.id) ? "fav-btn active" : "fav-btn"}
+              onClick={() => toggleFavourite(p)}
+            >
+              {isFavourite(p.id) ? " Remove from favourites" : " Add to favourites"}
+            </button>
           </div>
         ))}
       </div>
-    </div>
+      </div>
   );
 }
-
-
 export default App;
+
+      
+
+
+
+      
