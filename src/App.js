@@ -5,19 +5,26 @@ import "./App.css";
 
 
 function App() {
+  /*===========SEARCH STATE===============*/
   const [search, setSearch] = useState({
     type: "",
     minPrice: "",
     maxPrice: "",
     minBedrooms: "",
     maxBedrooms: "",
-    postcode: ""
+    postcode: "",
+    dateAfter: ""
   });
 
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [activeTab, setActiveTab] = useState("description");
   const [selectedImage, setSelectedImage] = useState(0);
 
+   /* ================= FAVOURITES STATE ================= */
+  const [favourites, setFavourites] = useState([]);
+  const [draggedProperty, setDraggedProperty] = useState(null);
+
+   /* ================= FILTER LOGIC ================= */
   const filteredProperties = useMemo(() => {
     return propertiesData.filter(p => {
       if (search.type && p.type !== search.type) return false;
@@ -26,6 +33,8 @@ function App() {
       if (search.minBedrooms && p.bedrooms < search.minBedrooms) return false;
       if (search.maxBedrooms && p.bedrooms > search.maxBedrooms) return false;
       if (search.postcode && !p.postcode.toLowerCase().startsWith(search.postcode.toLowerCase())) return false;
+      if (search.dateAfter && new Date(p.dateAdded) < new Date(search.dateAfter)) return false;
+        
       return true;
     });
   }, [search]);
@@ -33,6 +42,23 @@ function App() {
   const handleChange = e => {
     setSearch({ ...search, [e.target.name]: e.target.value });
   };
+   /* ================= FAVOURITES FUNCTIONS ================= */
+   const toggleFavourite = (property) => {
+    const exists = favourites.find((f) => f.id === property.id);
+
+    if (exists) {
+      setFavourites(favourites.filter((f) => f.id !== property.id));
+    } else {
+      setFavourites([...favourites, property]);
+    }
+  };
+
+  const isFavourite = (id) => favourites.some((f) => f.id === id);
+
+  const clearFavourites = () => {
+    setFavourites([]);
+  };
+
 
   /* ================= PROPERTY DETAILS PAGE ================= */
   if (selectedProperty) {
