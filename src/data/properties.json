@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "type": "house",
+    "price": 450000,
+    "bedrooms": 3,
+    "dateAdded": "2024-11-15",
+    "postcode": "BR1",
+    "location": "Bromley, London",
+    "description": "3-bedroom family house",
+    "longDescription": "A beautiful family home with garden and parking.",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
+      "https://images.unsplash.com/photo-1600607687644-c7171b42498b"
+    ],
+    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+  },
+  {
+    "id": 2,
+    "type": "flat",
+    "price": 280000,
+    "bedrooms": 2,
+    "dateAdded": "2024-12-01",
+    "postcode": "NW1",
+    "location": "Camden, London",
+    "description": "Modern 2-bedroom flat",
+    "longDescription": "A modern flat close to transport links.",
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+      "https://images.unsplash.com/photo-1502672023488-70e25813eb80",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858"
+    ],
+    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+  },
+  {
+    "id": 3,
+    "type": "house",
+    "price": 850000,
+    "bedrooms": 5,
+    "dateAdded": "2024-11-20",
+    "postcode": "SW3",
+    "location": "Chelsea, London",
+    "description": "Luxury 5-bedroom house",
+    "longDescription": "High-end property in a premium area.",
+    "images": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
+      "https://images.unsplash.com/photo-1600210492493-0946911123ea",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+    ],
+    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+  },
+  {
+    "id": 4,
+    "type": "flat",
+    "price": 195000,
+    "bedrooms": 1,
+    "dateAdded": "2024-12-10",
+    "postcode": "E1",
+    "location": "Whitechapel, London",
+    "description": "1-bedroom starter flat",
+    "longDescription": "Ideal for first-time buyers.",
+    "images": [
+      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9",
+      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7",
+      "https://images.unsplash.com/photo-1556020685-ae41abfc9365",
+      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
+    ],
+    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+  },
+  {
+    "id": 5,
+    "type": "house",
+    "price": 625000,
+    "bedrooms": 4,
+    "dateAdded": "2024-11-25",
+    "postcode": "BR1",
+    "location": "Bromley, London",
+    "description": "4-bedroom detached house",
+    "longDescription": "Spacious house ideal for families.",
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+      "https://images.unsplash.com/photo-1576941089067-2de3c901e126",
+      "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099",
+      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e",
+      "https://images.unsplash.com/photo-1600585152220-90363fe7e115",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+    ],
+    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+  },
+  {
+    "id": 6,
+    "type": "flat",
+    "price": 350000,
+    "bedrooms": 2,
+    "dateAdded": "2024-12-15",
+    "postcode": "SW3",
+    "location": "Chelsea, London",
+    "description": "2-bedroom flat with balcony",
+    "longDescription": "Stylish flat in prime location.",
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00",
+      "https://images.unsplash.com/photo-1494203484021-3c454daf695d",
+      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c",
+      "https://images.unsplash.com/photo-1515263487990-61b07816b324",
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
+      "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4"
+    ],
+    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+  },
+  {
+    "id": 7,
+    "type": "house",
+    "price": 550000,
+    "bedrooms": 3,
+    "dateAdded": "2024-12-05",
+    "postcode": "NW1",
+    "location": "Camden, London",
+    "description": "3-bedroom terraced house",
+    "longDescription": "Charming house close to city centre.",
+    "images": [
+      "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83",
+      "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
+      "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
+      "https://images.unsplash.com/photo-1600563438938-a9a27216b4f5",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+    ],
+    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+  }
+]
