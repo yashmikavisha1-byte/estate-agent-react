@@ -149,7 +149,8 @@ function App() {
         <input name="postcode" placeholder="Postcode (BR1)" onChange={handleChange} />
         <input type="date" name="dateAfter" value={search.dateAfter} onChange={handleChange} />
       </div>
-       {/* ===== RESULTS ===== */}
+
+      {/* ===== RESULTS ===== */}
       <h2>All Properties </h2>
       <div
         className="grid"
@@ -177,13 +178,47 @@ function App() {
           </div>
         ))}
       </div>
+
+      {/* ===== FAVOURITES ===== */}
+      <h2> Favourite Properties</h2>
+
+      {favourites.length > 0 && (
+        <button className="clear-btn" onClick={clearFavourites}>
+          Clear All Favourites
+        </button>
+      )}
+
+      <div
+        className="grid"
+        onDragOver={(e) => e.preventDefault()}
+        onDrop={handleDropToFavourites}
+      >
+        {favourites.length === 0 && (
+          <p style={{ gridColumn: "1 / -1", textAlign: "center", color: "#666" }}>
+            No favourite properties added yet. Drag a property here or click
+            <strong> “Add to favourites” </strong>
+          </p>
+        )}
+
+        {favourites.map((f) => (
+          <div
+            className="card"
+            key={f.id}
+            draggable
+            onDragStart={() => handleDragStart(f)}
+          >
+            <img src={f.images[0]} alt="Favourite" />
+            <h3>{f.description}</h3>
+
+            <button className="fav-btn active" onClick={() => toggleFavourite(f)}>
+               Remove
+            </button>
+          </div>
+        ))}
       </div>
+    </div>
   );
 }
+
 export default App;
-
-      
-
-
-
-      
+     
