@@ -77,7 +77,6 @@ function App() {
     setDraggedProperty(null);
   };
 
-
   /* ================= PROPERTY DETAILS PAGE ================= */
   if (selectedProperty) {
     return (
@@ -99,7 +98,7 @@ function App() {
               src={img}
               className={selectedImage === i ? "thumb active" : "thumb"}
               onClick={() => setSelectedImage(i)}
-              alt=""
+              alt="Thumbnail"
             />
           ))}
         </div>
@@ -148,6 +147,7 @@ function App() {
         <input name="minBedrooms" type="number" placeholder="Min Bedrooms" onChange={handleChange} />
         <input name="maxBedrooms" type="number" placeholder="Max Bedrooms" onChange={handleChange} />
         <input name="postcode" placeholder="Postcode (BR1)" onChange={handleChange} />
+        <input type="date" name="dateAfter" value={search.dateAfter} onChange={handleChange} />
       </div>
 
       <div className="grid">
