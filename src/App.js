@@ -58,6 +58,24 @@ function App() {
   const clearFavourites = () => {
     setFavourites([]);
   };
+    /* ================= DRAG & DROP ================= */
+  const handleDragStart = (property) => {
+    setDraggedProperty(property);
+  };
+
+  const handleDropToFavourites = () => {
+    if (!draggedProperty) return;
+    if (!isFavourite(draggedProperty.id)) {
+      setFavourites([...favourites, draggedProperty]);
+    }
+    setDraggedProperty(null);
+  };
+
+  const handleDropToResults = () => {
+    if (!draggedProperty) return;
+    setFavourites(favourites.filter((f) => f.id !== draggedProperty.id));
+    setDraggedProperty(null);
+  };
 
 
   /* ================= PROPERTY DETAILS PAGE ================= */
