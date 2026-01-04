@@ -1,16 +1,15 @@
 import React, { useState, useMemo } from "react";
-import Select from "react-select";            
-import DatePicker from "react-datepicker";   
-import "react-datepicker/dist/react-datepicker.css";   
+import Select from "react-select";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import propertiesData from "./data/properties.json";
 import { Home, Bed, MapPin } from "lucide-react";
 import "./App.css";
 
-
 function App() {
-  /*===========SEARCH STATE===============*/
+  /* ================= SEARCH STATE ================= */
   const [search, setSearch] = useState({
-    type: "",
+    type: null,
     minPrice: "",
     maxPrice: "",
     minBedrooms: "",
@@ -23,32 +22,38 @@ function App() {
   const [activeTab, setActiveTab] = useState("description");
   const [selectedImage, setSelectedImage] = useState(0);
 
-   /* ================= FAVOURITES STATE ================= */
+  /* ================= FAVOURITES STATE ================= */
   const [favourites, setFavourites] = useState([]);
   const [draggedProperty, setDraggedProperty] = useState(null);
 
-   /* ================= FILTER LOGIC ================= */
+  /* ================= FILTER LOGIC ================= */
   const filteredProperties = useMemo(() => {
-    return propertiesData.filter(p => {
-      if (search.type && p.type !== search.type) return false;
-      if (search.minPrice && p.price < search.minPrice) return false;
-      if (search.maxPrice && p.price > search.maxPrice) return false;
-      if (search.minBedrooms && p.bedrooms < search.minBedrooms) return false;
-      if (search.maxBedrooms && p.bedrooms > search.maxBedrooms) return false;
-      if (search.postcode && !p.postcode.toLowerCase().startsWith(search.postcode.toLowerCase())) return false;
-      if (search.dateAfter && new Date(p.dateAdded) < new Date(search.dateAfter)) return false;
-        
+    return propertiesData.filter((p) => {
+      if (search.type && p.type !== search.type.value) return false;
+      if (search.minPrice && p.price < Number(search.minPrice)) return false;
+      if (search.maxPrice && p.price > Number(search.maxPrice)) return false;
+      if (search.minBedrooms && p.bedrooms < Number(search.minBedrooms)) return false;
+      if (search.maxBedrooms && p.bedrooms > Number(search.maxBedrooms)) return false;
+      if (
+        search.postcode &&
+        !p.postcode.toLowerCase().startsWith(search.postcode.toLowerCase())
+      )
+        return false;
+      if (search.dateAfter && new Date(p.dateAdded) < search.dateAfter)
+        return false;
+
       return true;
     });
   }, [search]);
 
-  const handleChange = e => {
+  /* ================= INPUT HANDLERS ================= */
+  const handleChange = (e) => {
     setSearch({ ...search, [e.target.name]: e.target.value });
   };
-   /* ================= FAVOURITES FUNCTIONS ================= */
-   const toggleFavourite = (property) => {
-    const exists = favourites.find((f) => f.id === property.id);
 
+  /* ================= FAVOURITES FUNCTIONS ================= */
+  const toggleFavourite = (property) => {
+    const exists = favourites.find((f) => f.id === property.id);
     if (exists) {
       setFavourites(favourites.filter((f) => f.id !== property.id));
     } else {
@@ -61,7 +66,8 @@ function App() {
   const clearFavourites = () => {
     setFavourites([]);
   };
-    /* ================= DRAG & DROP ================= */
+
+  /* ================= DRAG & DROP ================= */
   const handleDragStart = (property) => {
     setDraggedProperty(property);
   };
@@ -91,7 +97,7 @@ function App() {
         <img
           src={selectedProperty.images[selectedImage]}
           className="main-image"
-          alt=""
+          alt="Property"
         />
 
         <div className="thumbs">
@@ -108,7 +114,7 @@ function App() {
 
         <p><MapPin /> {selectedProperty.location}</p>
         <p><Bed /> {selectedProperty.bedrooms} bedrooms</p>
-        <p>£{selectedProperty.price}</p>
+        <p>£{selectedProperty.price.toLocaleString()}</p>
 
         <div className="tabs">
           <button onClick={() => setActiveTab("description")}>Description</button>
@@ -121,7 +127,7 @@ function App() {
         )}
 
         {activeTab === "floor" && (
-          <img src={selectedProperty.floorPlan} className="floor" alt="" />
+          <img src={selectedProperty.floorPlan} className="floor" alt="Floor" />
         )}
 
         {activeTab === "map" && (
@@ -139,22 +145,33 @@ function App() {
       <h1><Home /> Estate Agent Search</h1>
 
       <div className="search-box">
-        <select name="type" onChange={handleChange}>
-          <option value="">Any Type</option>
-          <option value="house">House</option>
-          <option value="flat">Flat</option>
-        </select>
+        {/* react-select */}
+        <Select
+          options={[
+            { value: "house", label: "House" },
+            { value: "flat", label: "Flat" }
+          ]}
+          placeholder="Property Type"
+          value={search.type}
+          onChange={(value) => setSearch({ ...search, type: value })}
+        />
 
         <input name="minPrice" type="number" placeholder="Min Price" onChange={handleChange} />
         <input name="maxPrice" type="number" placeholder="Max Price" onChange={handleChange} />
         <input name="minBedrooms" type="number" placeholder="Min Bedrooms" onChange={handleChange} />
         <input name="maxBedrooms" type="number" placeholder="Max Bedrooms" onChange={handleChange} />
         <input name="postcode" placeholder="Postcode (BR1)" onChange={handleChange} />
-        <input type="date" name="dateAfter" value={search.dateAfter} onChange={handleChange} />
+
+        {/* react-datepicker */}
+        <DatePicker
+          selected={search.dateAfter}
+          onChange={(date) => setSearch({ ...search, dateAfter: date })}
+          placeholderText="Date Added After"
+        />
       </div>
 
       {/* ===== RESULTS ===== */}
-      <h2>All Properties </h2>
+      <h2>All Properties</h2>
       <div
         className="grid"
         onDragOver={(e) => e.preventDefault()}
@@ -176,14 +193,14 @@ function App() {
               className={isFavourite(p.id) ? "fav-btn active" : "fav-btn"}
               onClick={() => toggleFavourite(p)}
             >
-              {isFavourite(p.id) ? " Remove from favourites" : " Add to favourites"}
+              {isFavourite(p.id) ? "Remove from favourites" : "Add to favourites"}
             </button>
           </div>
         ))}
       </div>
 
       {/* ===== FAVOURITES ===== */}
-      <h2> Favourite Properties</h2>
+      <h2>Favourite Properties</h2>
 
       {favourites.length > 0 && (
         <button className="clear-btn" onClick={clearFavourites}>
@@ -198,8 +215,7 @@ function App() {
       >
         {favourites.length === 0 && (
           <p style={{ gridColumn: "1 / -1", textAlign: "center", color: "#666" }}>
-            No favourite properties added yet. Drag a property here or click
-            <strong> “Add to favourites” </strong>
+            No favourite properties added yet.
           </p>
         )}
 
@@ -214,7 +230,7 @@ function App() {
             <h3>{f.description}</h3>
 
             <button className="fav-btn active" onClick={() => toggleFavourite(f)}>
-               Remove
+              Remove
             </button>
           </div>
         ))}
@@ -224,4 +240,3 @@ function App() {
 }
 
 export default App;
-     
