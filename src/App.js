@@ -1,4 +1,7 @@
 import React, { useState, useMemo } from "react";
+import Select from "react-select";            
+import DatePicker from "react-datepicker";   
+import "react-datepicker/dist/react-datepicker.css";   
 import propertiesData from "./data/properties.json";
 import { Home, Bed, MapPin } from "lucide-react";
 import "./App.css";
@@ -13,7 +16,7 @@ function App() {
     minBedrooms: "",
     maxBedrooms: "",
     postcode: "",
-    dateAfter: ""
+    dateAfter: null
   });
 
   const [selectedProperty, setSelectedProperty] = useState(null);
