@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from "react";
 
 /* ================= UI WIDGETS ================= */
-// ✅ FIXED: react-select added
+//  react-select added
 import Select from "react-select";
-// ✅ FIXED: react-datepicker added
+// react-datepicker added
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -14,13 +14,13 @@ import "./App.css";
 function App() {
   /* ================= SEARCH STATE ================= */
   const [search, setSearch] = useState({
-    type: null, // ✅ FIXED: react-select uses object
+    type: null, // react-select uses object
     minPrice: "",
     maxPrice: "",
     minBedrooms: "",
     maxBedrooms: "",
     postcode: "",
-    dateAfter: null // ✅ FIXED: Date object for datepicker
+    dateAfter: null //Date object for datepicker
   });
 
   const [selectedProperty, setSelectedProperty] = useState(null);
@@ -34,10 +34,10 @@ function App() {
   /* ================= FILTER LOGIC ================= */
   const filteredProperties = useMemo(() => {
     return propertiesData.filter((p) => {
-      // ✅ FIXED: react-select value handling
+      //  react-select value handling
       if (search.type && p.type !== search.type.value) return false;
 
-      // ✅ FIXED: Number conversion
+      //  Number conversion
       if (search.minPrice && p.price < Number(search.minPrice)) return false;
       if (search.maxPrice && p.price > Number(search.maxPrice)) return false;
 
@@ -50,7 +50,7 @@ function App() {
       )
         return false;
 
-      // ✅ FIXED: Date comparison
+      //  Date comparison
       if (search.dateAfter && new Date(p.dateAdded) < search.dateAfter)
         return false;
 
@@ -76,7 +76,7 @@ function App() {
 
   const isFavourite = (id) => favourites.some((f) => f.id === id);
 
-  // ✅ FIXED: clear all favourites
+  // clear all favourites
   const clearFavourites = () => setFavourites([]);
 
   /* ================= DRAG & DROP ================= */
@@ -101,7 +101,7 @@ function App() {
   };
 
   /* ================= PROPERTY DETAILS PAGE ================= */
-  // ✅ FIXED: return is INSIDE component (no syntax error)
+  // return is INSIDE component 
   if (selectedProperty) {
     return (
       <div className="container">
@@ -129,17 +129,35 @@ function App() {
             />
           ))}
         </div>
-
-        <p><MapPin /> {selectedProperty.location}</p>
+<p><MapPin /> {selectedProperty.location}</p>
         <p><Bed /> {selectedProperty.bedrooms} bedrooms</p>
         <p>£{selectedProperty.price.toLocaleString()}</p>
+        
 
-        {/* React Tabs */}
-        <div className="tabs">
-          <button onClick={() => setActiveTab("description")}>Description</button>
-          <button onClick={() => setActiveTab("floor")}>Floor Plan</button>
-          <button onClick={() => setActiveTab("map")}>Map</button>
-        </div>
+        {/* React Tabs */}    {/*Fixed✅*/}
+       <div className="tabs">
+  <button
+    className={activeTab === "description" ? "active" : ""}
+    onClick={() => setActiveTab("description")}
+  >
+    Description
+  </button>
+
+  <button
+    className={activeTab === "floor" ? "active" : ""}
+    onClick={() => setActiveTab("floor")}
+  >
+    Floor Plan
+  </button>
+
+  <button
+    className={activeTab === "map" ? "active" : ""}
+    onClick={() => setActiveTab("map")}
+  >
+    Map
+  </button>
+</div>
+
 
         {activeTab === "description" && (
           <p>{selectedProperty.longDescription}</p>
@@ -153,10 +171,15 @@ function App() {
           />
         )}
 
-        {activeTab === "map" && (
-          <div className="map-box">
-            Google Map for {selectedProperty.location}
-          </div>
+         {activeTab === "map" && (
+          <iframe
+            title="map"
+            className="map"
+            src={`https://www.google.com/maps?q=${encodeURIComponent(
+              selectedProperty.location
+            )}&output=embed`}
+            loading="lazy"
+          />
         )}
       </div>
     );
@@ -165,10 +188,10 @@ function App() {
   /* ================= SEARCH PAGE ================= */
   return (
     <div className="container">
-      <h1><Home /> Estate Agent Search</h1>
+      <h1><Home /> Estate Agent Property Search</h1>
 
       <div className="search-box">
-        {/* ✅ FIXED: react-select */}
+        {/*react-select */}
         <Select
           options={[
             { value: "house", label: "House" },
@@ -209,7 +232,7 @@ function App() {
           onChange={handleChange}
         />
 
-        {/* ✅ FIXED: react-datepicker */}
+        {/* react-datepicker */}
         <DatePicker
           selected={search.dateAfter}
           onChange={(date) => setSearch({ ...search, dateAfter: date })}
@@ -220,7 +243,7 @@ function App() {
       {/* ===== RESULTS ===== */}
       <h2>All Properties</h2>
       <div
-        className="grid"
+        className="grid"        /*Fixed✅*/
         onDragOver={(e) => e.preventDefault()}
         onDrop={handleDropToResults}
       >
@@ -271,8 +294,7 @@ function App() {
             No favourite properties added yet.
           </p>
         )}
-
-        {favourites.map((f) => (
+{favourites.map((f) => (
           <div
             className="card"
             key={f.id}
@@ -296,3 +318,4 @@ function App() {
 }
 
 export default App;
+       

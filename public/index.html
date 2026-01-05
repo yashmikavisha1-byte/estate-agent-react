@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8" />
 
-    <!-- 🔒 FIXED FOR SECURITY: Content Security Policy (CSP) -->
+    <!--  FIXED FOR SECURITY: Content Security Policy (CSP) -->
     <!-- This protects against XSS and client-side injection attacks -->
     <meta
       http-equiv="Content-Security-Policy"
       content="
         default-src 'self';
         img-src 'self' data: https:;
-        script-src 'self';
+        script-src 'self' https://maps.googleapis.com;
         style-src 'self' 'unsafe-inline';
         font-src 'self' https:;
+        frame-src https://www.google.com;
       "
     />
-    <!-- 🔒 END SECURITY FIX -->
+    <!--  END SECURITY FIX -->
 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

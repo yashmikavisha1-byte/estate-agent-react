@@ -1,114 +1,98 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
   margin: 0;
+  color: #333;
 }
-
-/* ================= MAIN CONTAINER ================= */
 .container {
-  padding: 20px;
   max-width: 1200px;
   margin: auto;
+  padding: 20px;
+}
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f3c88;
 }
 
-/* ================= SEARCH BOX ================= */
+/* SEARCH */
 .search-box {
   background: white;
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 16px;
+  border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  border-radius: 6px;
+  margin-bottom: 20px;
 }
 
-.search-box input,
-.search-box select {
-  padding: 8px;
-  min-width: 150px;
-}
-
-/* ================= PROPERTY GRID ================= */
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
 
-/* ================= PROPERTY CARD ================= */
+/* CARD */
 .card {
   background: white;
+  border-radius: 8px;
   padding: 10px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.card h3 {
-  margin: 10px 0 5px;
-  font-size: 16px;
+.price {
+  font-weight: bold;
+  color: #1f3c88;
 }
 
-.card p {
-  margin: 4px 0;
-  font-size: 14px;
-}
-
-/* ================= FAVOURITE BUTTON ================= */
+/* BUTTONS */
 .fav-btn {
-  margin-top: 10px;
   width: 100%;
+  margin-top: 10px;
   padding: 8px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  background: #fff;
+  background: white;
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
-.fav-btn:hover {
-  background: #f7f7f7;
-}
-
-/* ACTIVE (FAVOURITED) */
 .fav-btn.active {
   background: #ff4d4d;
   color: white;
   border-color: #ff4d4d;
 }
 
-/* ================= FAVOURITES SECTION ================= */
-h2 {
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-
-.favourites-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-/* ================= PROPERTY DETAILS PAGE ================= */
+/* DETAILS */
 .main-image {
   width: 100%;
-  max-height: 400px;
+  max-height: 420px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .thumbs {
   display: flex;
   gap: 10px;
   margin: 10px 0;
-  flex-wrap: wrap;
 }
 
 .thumb {
@@ -116,46 +100,44 @@ h2 {
   height: 60px;
   opacity: 0.5;
   cursor: pointer;
-  object-fit: cover;
-  border-radius: 4px;
 }
 
 .thumb.active {
   opacity: 1;
-  border: 2px solid #007bff;
+  border: 2px solid #1f3c88;
 }
 
-/* ================= TABS ================= */
-.tabs {
-  margin-top: 15px;
-}
-
+/* TABS */
 .tabs button {
   margin-right: 10px;
   padding: 6px 12px;
-  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background: #e0e6ed;
 }
 
+.tabs button.active {
+  background: #1f3c88;
+  color: white;
+}
+
+/* MAP */
+.map {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* EMPTY */
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #777;
+}
+/* ================= FLOOR PLAN ================= */
 .floor {
   width: 100%;
   max-width: 400px;
   margin-top: 10px;
-}
-
-.map-box {
-  background: #ddd;
-  padding: 40px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .search-box {
-    flex-direction: column;
-  }
-
-  .thumbs {
-    justify-content: center;
-  }
 }

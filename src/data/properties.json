@@ -6,7 +6,7 @@
     "bedrooms": 3,
     "dateAdded": "2024-11-15",
     "postcode": "BR1",
-    "location": "Bromley, London",
+    "location": "Bromley, London BR1", 
     "description": "3-bedroom family house",
     "longDescription": "This beautiful 3-bedroom family house is located in a peaceful residential area of Bromley. The property offers a spacious living room, a modern kitchen, and well-sized bedrooms suitable for a growing family. It also includes a private garden, perfect for children or outdoor activities, and a parking space. The house is close to schools, supermarkets, and public transport, making daily life easy and comfortable.",
     "images": [
@@ -26,7 +26,7 @@
     "bedrooms": 2,
     "dateAdded": "2024-12-01",
     "postcode": "NW1",
-    "location": "Camden, London",
+    "location": "Camden, London NW1",
     "description": "Modern 2-bedroom flat",
     "longDescription": "This modern 2-bedroom flat is located in the popular area of Camden, London. The flat has a bright and open living space with a modern kitchen and stylish design. Both bedrooms are well-sized and comfortable. The property is close to shops, restaurants, and public transport, making it ideal for professionals or small families who want city living.",
     "images": [
@@ -46,7 +46,7 @@
     "bedrooms": 5,
     "dateAdded": "2024-11-20",
     "postcode": "SW3",
-    "location": "Chelsea, London",
+    "location": "Chelsea, London SW3", 
     "description": "Luxury 5-bedroom house",
     "longDescription": "This luxury 5-bedroom house is located in one of London’s most prestigious areas, Chelsea. The property features large bedrooms, high-quality interiors, and spacious living areas designed for comfort and style. It also includes a private swimming pool and outdoor space for relaxation. This home is ideal for buyers looking for luxury, space, and a prime location close to exclusive shops and restaurants.",
     "images": [
@@ -66,11 +66,10 @@
     "bedrooms": 1,
     "dateAdded": "2024-12-10",
     "postcode": "E1",
-    "location": "Whitechapel, London",
+    "location": "Whitechapel, London E1", 
     "description": "1-bedroom starter flat",
     "longDescription": "This 1-bedroom starter flat is perfect for first-time buyers or young professionals. Located in Whitechapel, the flat offers a comfortable living area, a functional kitchen, and a cozy bedroom. The property is close to public transport, supermarkets, and essential services. It is a great opportunity for affordable living in London.",
-    "images": [
-      "https://images.unsplash.com/photo-1536376072261-38c75010e6c9",
+    "images": ["https://images.unsplash.com/photo-1536376072261-38c75010e6c9",
       "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
       "https://images.unsplash.com/photo-1574362848149-11496d93a7c7",
       "https://images.unsplash.com/photo-1556020685-ae41abfc9365",
@@ -86,7 +85,7 @@
     "bedrooms": 4,
     "dateAdded": "2024-11-25",
     "postcode": "BR1",
-    "location": "Bromley, London",
+    "location": "Bromley, London BR1", 
     "description": "4-bedroom detached house",
     "longDescription": "This spacious 4-bedroom detached house is located in Bromley and offers excellent privacy and space. The property includes a large living area, a modern kitchen, and well-sized bedrooms. It also features a private driveway and a large garden, ideal for families who enjoy outdoor space. The house is close to good schools and local amenities.",
     "images": [
@@ -106,7 +105,7 @@
     "bedrooms": 2,
     "dateAdded": "2024-12-15",
     "postcode": "SW3",
-    "location": "Chelsea, London",
+    "location": "Chelsea, London SW3", 
     "description": "2-bedroom flat with balcony",
     "longDescription": "This stylish 2-bedroom flat in Chelsea comes with a private balcony that provides outdoor space and natural light. The flat has modern interiors, a comfortable living area, and a well-equipped kitchen. Located close to cafes, shops, and transport links, this property is ideal for professionals or couples looking for modern city living.",
     "images": [
@@ -126,7 +125,7 @@
     "bedrooms": 3,
     "dateAdded": "2024-12-05",
     "postcode": "NW1",
-    "location": "Camden, London",
+    "location": "Camden, London NW1", 
     "description": "3-bedroom terraced house",
     "longDescription": "This well-maintained 3-bedroom terraced house is located in Camden. The property includes a cozy living room, a modern kitchen, and comfortable bedrooms. It is situated in a friendly neighborhood and is close to schools, parks, and public transport. This home is suitable for families or buyers looking for a balance between city life and comfort.",
     "images": [
