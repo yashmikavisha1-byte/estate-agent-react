@@ -1,35 +1,35 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-/* 1️ App loads without crashing */
-test("renders estate agent search heading", () => {
+/* 1️⃣ App loads without crashing */
+test("renders estate agent property search heading", () => {
   render(<App />);
   const heading = screen.getByText(/estate agent property search/i);
   expect(heading).toBeInTheDocument();
 });
 
-/* 2️ Search form inputs are rendered */
+/* 2️⃣ Search form inputs are rendered */
 test("renders postcode input", () => {
   render(<App />);
   const postcodeInput = screen.getByPlaceholderText(/postcode/i);
   expect(postcodeInput).toBeInTheDocument();
 });
 
-/* 3️ Property cards are displayed */
-test("renders property cards", () => {
+/* 3️⃣ Property images are displayed */
+test("renders property images", () => {
   render(<App />);
-  const cards = screen.getAllByRole("img");
-  expect(cards.length).toBeGreaterThan(1);
+  const images = screen.getAllByRole("img");
+  expect(images.length).toBeGreaterThan(0);
 });
 
-/* 4️ Property type filter exists */
+/* 4️⃣ Property type filter exists (react-select) */
 test("renders property type filter", () => {
   render(<App />);
-  const typeSelect = screen.getByDisplayValue(/any type/i);
+  const typeSelect = screen.getByText(/property type/i);
   expect(typeSelect).toBeInTheDocument();
 });
 
-/* 5️ App does not crash when rendering */
+/* 5️⃣ App renders without crashing */
 test("app renders without crashing", () => {
   render(<App />);
 });

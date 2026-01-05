@@ -4,106 +4,106 @@
     "type": "house",
     "price": 450000,
     "bedrooms": 3,
-    "dateAdded": "2024-11-15",
+    "dateAdded": "2025-11-15",
     "postcode": "BR1",
     "location": "Bromley, London BR1", 
     "description": "3-bedroom family house",
     "longDescription": "This beautiful 3-bedroom family house is located in a peaceful residential area of Bromley. The property offers a spacious living room, a modern kitchen, and well-sized bedrooms suitable for a growing family. It also includes a private garden, perfect for children or outdoor activities, and a parking space. The house is close to schools, supermarkets, and public transport, making daily life easy and comfortable.",
     "images": [
       "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea",
-      "https://images.unsplash.com/photo-1600607687644-c7171b42498b"
+      "https://images.unsplash.com/photo-1568605115459-4b731184f961",
+      "https://images.unsplash.com/photo-1634212926610-d9202def3a21",
+      "https://images.unsplash.com/photo-1722888799634-c5093906feae",
+      "https://images.unsplash.com/photo-1635097946666-591f2cbafc3a",
+      "https://images.unsplash.com/photo-1721738860210-f3e858afa735"
     ],
-    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+    "floorPlan": "https://cdn.houseplansservices.com/product/j20vd47brg8erjb9ohblga3573/w1024.gif?v=21"
   },
   {
     "id": 2,
     "type": "flat",
     "price": 280000,
     "bedrooms": 2,
-    "dateAdded": "2024-12-01",
+    "dateAdded": "2025-12-01",
     "postcode": "NW1",
     "location": "Camden, London NW1",
     "description": "Modern 2-bedroom flat",
     "longDescription": "This modern 2-bedroom flat is located in the popular area of Camden, London. The flat has a bright and open living space with a modern kitchen and stylish design. Both bedrooms are well-sized and comfortable. The property is close to shops, restaurants, and public transport, making it ideal for professionals or small families who want city living.",
     "images": [
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "https://images.unsplash.com/photo-1676680071181-0a0b45968d23",
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
-      "https://images.unsplash.com/photo-1502672023488-70e25813eb80",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858"
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a",
+      "https://images.unsplash.com/photo-1595526051245-4506e0005bd0"
     ],
-    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+    "floorPlan": "https://cdn.houseplansservices.com/product/a4ah41vvfhmaia7ns93a2masg3/w1024.jpg?v=3"
   },
   {
     "id": 3,
     "type": "house",
     "price": 850000,
     "bedrooms": 5,
-    "dateAdded": "2024-11-20",
+    "dateAdded": "2025-11-20",
     "postcode": "SW3",
     "location": "Chelsea, London SW3", 
     "description": "Luxury 5-bedroom house",
     "longDescription": "This luxury 5-bedroom house is located in one of London’s most prestigious areas, Chelsea. The property features large bedrooms, high-quality interiors, and spacious living areas designed for comfort and style. It also includes a private swimming pool and outdoor space for relaxation. This home is ideal for buyers looking for luxury, space, and a prime location close to exclusive shops and restaurants.",
     "images": [
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde",
-      "https://images.unsplash.com/photo-1600210492493-0946911123ea",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+      "https://images.unsplash.com/photo-1745761321363-da0d5b6013ce",
+      "https://images.unsplash.com/photo-1613545325278-f24b0cae1224",
+      "https://images.unsplash.com/photo-1760072513457-651955c7074d",
+      "https://plus.unsplash.com/premium_photo-1661956103157-556678e6dafd",
+      "https://plus.unsplash.com/premium_photo-1661879252375-7c1db1932572"
     ],
-    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+    "floorPlan": "https://cdn.houseplansservices.com/product/b308vp4tvclvbf6l0ciablhd7k/w1024.jpg?v=2"
   },
   {
     "id": 4,
     "type": "flat",
     "price": 195000,
     "bedrooms": 1,
-    "dateAdded": "2024-12-10",
+    "dateAdded": "2025-12-10",
     "postcode": "E1",
     "location": "Whitechapel, London E1", 
     "description": "1-bedroom starter flat",
     "longDescription": "This 1-bedroom starter flat is perfect for first-time buyers or young professionals. Located in Whitechapel, the flat offers a comfortable living area, a functional kitchen, and a cozy bedroom. The property is close to public transport, supermarkets, and essential services. It is a great opportunity for affordable living in London.",
     "images": ["https://images.unsplash.com/photo-1536376072261-38c75010e6c9",
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
       "https://images.unsplash.com/photo-1574362848149-11496d93a7c7",
-      "https://images.unsplash.com/photo-1556020685-ae41abfc9365",
-      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92",
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4",
+      "https://images.unsplash.com/photo-1661107259637-4e1c55462428",
+      "https://plus.unsplash.com/premium_photo-1683917067988-1b0323c3b574"
     ],
-    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+    "floorPlan": "https://cdn.houseplansservices.com/product/hc0glb6santmhbshqinlvfdf47/w1024.jpg?v=3"
   },
   {
     "id": 5,
     "type": "house",
     "price": 625000,
     "bedrooms": 4,
-    "dateAdded": "2024-11-25",
+    "dateAdded": "2025-11-25",
     "postcode": "BR1",
     "location": "Bromley, London BR1", 
     "description": "4-bedroom detached house",
     "longDescription": "This spacious 4-bedroom detached house is located in Bromley and offers excellent privacy and space. The property includes a large living area, a modern kitchen, and well-sized bedrooms. It also features a private driveway and a large garden, ideal for families who enjoy outdoor space. The house is close to good schools and local amenities.",
     "images": [
       "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
-      "https://images.unsplash.com/photo-1576941089067-2de3c901e126",
-      "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099",
-      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
+      "https://images.unsplash.com/photo-1631149784601-8e6c266b046a",
+      "https://images.unsplash.com/photo-1600494448850-6013c64ba722",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+      "https://images.unsplash.com/photo-1643949719317-4342d8d4031e",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
     ],
-    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+    "floorPlan": "https://cdn.houseplansservices.com/product/tkh76lve89rshpmn5jehlelh32/w1024.gif?v=21"
   },
   {
     "id": 6,
     "type": "flat",
     "price": 350000,
     "bedrooms": 2,
-    "dateAdded": "2024-12-15",
+    "dateAdded": "2025-12-15",
     "postcode": "SW3",
     "location": "Chelsea, London SW3", 
     "description": "2-bedroom flat with balcony",
@@ -111,19 +111,19 @@
     "images": [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00",
       "https://images.unsplash.com/photo-1494203484021-3c454daf695d",
-      "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c",
-      "https://images.unsplash.com/photo-1515263487990-61b07816b324",
-      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87",
-      "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4"
+      "https://images.unsplash.com/photo-1614622352876-4a90d2515f0d",
+      "https://plus.unsplash.com/premium_photo-1680382578871-32ce66f9ae25",
+      "https://images.unsplash.com/photo-1643949700215-e61cdca053f7",
+      "https://plus.unsplash.com/premium_photo-1671269705771-1ae9b3162118"
     ],
-    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+    "floorPlan": "https://cdn.houseplansservices.com/product/5c48ab802daf60b9a7de2cf4e0e872d6f5a64c1f180815afebcd3292feff25b3/w1024.png?v=11"
   },
   {
     "id": 7,
     "type": "house",
     "price": 550000,
     "bedrooms": 3,
-    "dateAdded": "2024-12-05",
+    "dateAdded": "2025-12-05",
     "postcode": "NW1",
     "location": "Camden, London NW1", 
     "description": "3-bedroom terraced house",
@@ -131,11 +131,11 @@
     "images": [
       "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83",
       "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
-      "https://images.unsplash.com/photo-1600566752355-35792bedcfea",
-      "https://images.unsplash.com/photo-1600563438938-a9a27216b4f5",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+      "https://images.unsplash.com/photo-1616047006789-b7af5afb8c20",
+      "https://images.unsplash.com/photo-1609347744425-175ecbd3cc0e",
+      "https://images.unsplash.com/photo-1635247049885-0910fd28901b",
+      "https://images.unsplash.com/photo-1599202937077-3f7cdc53f2e1"
     ],
-    "floorPlan": "https://images.unsplash.com/photo-1503174971373-b1f69850bded"
+    "floorPlan": "https://cdn.houseplansservices.com/product/k7rsan2huiupdh2lgn6ahsh3p1/w1024.gif?v=23"
   }
 ]
